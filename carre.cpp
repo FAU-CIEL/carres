@@ -43,19 +43,17 @@ void CCarre::afficher()
 void CCarre::Deplacer(char direction, int saut)
 {
 	if (direction == 'n')
-	{
 		sy -= saut;
-	}
 	else if (direction == 's')
-	{
 		sy += saut;
-	}
 	else if (direction == 'e')
-	{
 		sx += saut;
-	}
 	else if (direction == 'o')
-	{
 		sx -= saut;
-	}
+}
+
+void CCarre::Deplacer(int dx, int dy)
+{
+	sx += dx;
+	sy += dy;
 }

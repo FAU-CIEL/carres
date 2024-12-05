@@ -11,10 +11,14 @@ void main()
 	int longueur_cote;
 	char direction;
 	int saut;
+	int dx;
+	int dy;
 	decalage_horizontale = 0;
 	decalage_verticale = 0;
 	longueur_cote = 0;
 	saut = 0;
+	dx = 0;
+	dy = 0;
 
 	cout << "Entrez la valeur du decalage horizontale : ";
 	cin >> decalage_horizontale;
@@ -26,11 +30,22 @@ void main()
 	cin >> direction;
 	cout << "Entrez la longueur du saut : ";
 	cin >> saut;
+	cout << "Entrez la premiere coordonner du vecteur : ";
+	cin >> dx;
+	cout << "Entrez la deuxieme coordonner du vecteur : ";
+	cin >> dy;
+
 	
 	carre1.Setsx(decalage_horizontale);
 	carre1.Setsy(decalage_verticale);
 	carre1.Setcote(longueur_cote);
 
 	carre1.Deplacer(direction, saut);
-	cout << "sx = " << carre1.Getsx() << "\tsy = " << carre1.Getsy() << "\tcote = " << carre1.GetCote() << endl;
+	cout << "Avec la direction et le saut\nsx = " << carre1.Getsx() << "\tsy = " << carre1.Getsy() << "\tcote = " << carre1.GetCote() << endl;
+
+	carre1.Setsx(decalage_horizontale);
+	carre1.Setsy(decalage_verticale);
+	carre1.Deplacer(dx, dy);
+	cout << "Avec le vecteur\nsx = " << carre1.Getsx() << "\tsy = " << carre1.Getsy() << "\tcote = " << carre1.GetCote() << endl;
+
 }

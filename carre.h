@@ -24,4 +24,5 @@ public:
 	//   - saut : nombre de pixels de déplacement du carré 
 	// Sortie : Aucune 
 	void Deplacer(char direction, int saut);
+	void Deplacer(int dx, int dy);
 };
