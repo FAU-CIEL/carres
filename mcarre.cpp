@@ -19,6 +19,10 @@ void main()
 	saut = 0;
 	dx = 0;
 	dy = 0;
+	carre[0].init();
+	carre[1].init();
+	carre[2].init();
+	carre[3].init();
 
 	cout << "Entrez la valeur du decalage horizontale : ";
 	cin >> decalage_horizontale;

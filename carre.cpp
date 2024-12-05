@@ -3,6 +3,13 @@
 
 using namespace std;
 
+void CCarre::init()
+{
+	sx = 0;
+	sy = 0;
+	cote = 0;
+}
+
 void CCarre::Setsx(int sx1)
 {
 	sx = sx1;
