@@ -23,5 +23,5 @@ void main()
 	carre1.Setsx(decalage_horizontale);
 	carre1.Setsy(decalage_verticale);
 	carre1.Setcote(longueur_cote);
-	carre1.afficher();
+	cout << "sx = " << carre1.Getsx() << "\tsy = " << carre1.Getsy() << "\tcote = " << carre1.GetCote() << endl;
 }
