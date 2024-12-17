@@ -3,11 +3,18 @@
 
 using namespace std;
 
-void CCarre::init()
+CCarre::CCarre()
 {
 	sx = 0;
 	sy = 0;
 	cote = 0;
+}
+
+CCarre::CCarre(int x, int y, int c)
+{
+	sx = x;
+	sy = y;
+	cote = c;
 }
 
 void CCarre::Setsx(int sx1)

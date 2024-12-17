@@ -8,7 +8,8 @@ private:
 	int cote;
 
 public:
-	void init(); // initialise les attributs
+	CCarre(); // initialise les attributs
+	CCarre(int x, int y, int c); // initialise les attributs avec de valeur
 	void Setsx(int sx1); // change la valeur de sx avec la valeur de sx1
 	void Setsy(int sy1); // change la valeur de sy avec la valeur de sy1
 	void Setcote(int cote1); // change la valeur de cote avec la valeur de cote1

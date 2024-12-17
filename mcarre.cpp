@@ -1,4 +1,5 @@
 #include <iostream>
+#include<stdio.h>
 #include "carre.h"
 
 using namespace std;
@@ -13,16 +14,18 @@ void main()
 	int saut;
 	int dx;
 	int dy;
+
+	CCarre *carre4 = new CCarre;
 	decalage_horizontale = 0;
 	decalage_verticale = 0;
 	longueur_cote = 0;
 	saut = 0;
 	dx = 0;
 	dy = 0;
-	carre[0].init();
-	carre[1].init();
-	carre[2].init();
-	carre[3].init();
+	carre[0];
+	carre[1];
+	carre[2];
+	carre[3];
 
 	cout << "Entrez la valeur du decalage horizontale : ";
 	cin >> decalage_horizontale;
@@ -43,6 +46,7 @@ void main()
 	carre[1].Setcote(longueur_cote);
 	carre[2].Setcote(longueur_cote);
 	carre[3].Setcote(longueur_cote);
+	carre4->Setcote(longueur_cote);
 	
 	carre[0].Setsx(decalage_horizontale);
 	carre[0].Setsy(decalage_verticale);
@@ -52,7 +56,9 @@ void main()
 	carre[2].Setsy(decalage_verticale);
 	carre[3].Setsx(decalage_horizontale);
 	carre[3].Setsy(decalage_verticale);
-
+	carre4->Setsx(decalage_horizontale);
+	carre4->Setsy(decalage_verticale);
+	
 	carre[0].Deplacer(direction, saut);
 	cout << "carre 1\nsx = " << carre[0].Getsx() << "\tsy = " << carre[0].Getsy() << "\tcote = " << carre[0].GetCote() << endl;
 
@@ -64,4 +70,9 @@ void main()
 	
 	carre[3].Deplacer(dx+5, dy+5);
 	cout << "carre 4\nsx = " << carre[3].Getsx() << "\tsy = " << carre[3].Getsy() << "\tcote = " << carre[3].GetCote() << endl;
+
+	carre4->Deplacer(dx + 50, dy - 50);
+	cout << "carre 5\nsx = " << carre4->Getsx() << "\tsy = " << carre4->Getsy() << "\tcote = " << carre4->GetCote() << endl;
+
+	delete carre4;
 }
